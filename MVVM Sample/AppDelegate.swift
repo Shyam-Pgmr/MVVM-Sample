@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        APIs.getUsers(offset: 0, count: 10) { (result) in
+            switch result {
+            case .success(let response):
+                print(response.data.users)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         return true
     }
 

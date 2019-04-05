@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		01CD187922576C4E0012CB0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD187822576C4E0012CB0F /* AppDelegate.swift */; };
-		01CD187B22576C4E0012CB0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD187A22576C4E0012CB0F /* ViewController.swift */; };
 		01CD187E22576C4E0012CB0F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD187C22576C4E0012CB0F /* Home.storyboard */; };
 		01CD188022576C4F0012CB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CD187F22576C4F0012CB0F /* Assets.xcassets */; };
 		01CD188322576C4F0012CB0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD188122576C4F0012CB0F /* LaunchScreen.storyboard */; };
 		01CD188E22576C4F0012CB0F /* MVVM_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD188D22576C4F0012CB0F /* MVVM_SampleTests.swift */; };
+		01CD18AB225775640012CB0F /* MSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18AA225775640012CB0F /* MSHomeViewController.swift */; };
+		01CD18AF225775D80012CB0F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18AE225775D80012CB0F /* EndPoint.swift */; };
+		01CD18B2225779920012CB0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18B1225779920012CB0F /* Constants.swift */; };
+		01CD18B422577A5E0012CB0F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18B322577A5E0012CB0F /* APIConstants.swift */; };
+		01CD18B622577B0C0012CB0F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18B522577B0C0012CB0F /* APIManager.swift */; };
+		01CD18B822577BE50012CB0F /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18B722577BE50012CB0F /* APIs.swift */; };
+		01CD18BA22577C110012CB0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18B922577C110012CB0F /* User.swift */; };
+		01CD18BC22577C520012CB0F /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BB22577C520012CB0F /* UserResponse.swift */; };
+		01CD18BE22577C5E0012CB0F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BD22577C5E0012CB0F /* BaseResponse.swift */; };
+		01CD18C022577DE70012CB0F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BF22577DE70012CB0F /* APIError.swift */; };
+		01CD18C322577F300012CB0F /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */; };
 		0CC6D6ACAB6B92A8D81FC9F9 /* Pods_MVVM_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */; };
 		BCD7982768E35FE307F51F8B /* Pods_MVVM_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B373318C4A32DDC8AF99B011 /* Pods_MVVM_Sample.framework */; };
 /* End PBXBuildFile section */
@@ -30,7 +40,6 @@
 /* Begin PBXFileReference section */
 		01CD187522576C4E0012CB0F /* MVVM Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CD187822576C4E0012CB0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01CD187A22576C4E0012CB0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01CD187D22576C4E0012CB0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		01CD187F22576C4F0012CB0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CD188222576C4F0012CB0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +47,17 @@
 		01CD188922576C4F0012CB0F /* MVVM SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CD188D22576C4F0012CB0F /* MVVM_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_SampleTests.swift; sourceTree = "<group>"; };
 		01CD188F22576C4F0012CB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CD18AA225775640012CB0F /* MSHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSHomeViewController.swift; sourceTree = "<group>"; };
+		01CD18AE225775D80012CB0F /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		01CD18B1225779920012CB0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01CD18B322577A5E0012CB0F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		01CD18B522577B0C0012CB0F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		01CD18B722577BE50012CB0F /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		01CD18B922577C110012CB0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		01CD18BB22577C520012CB0F /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		01CD18BD22577C5E0012CB0F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		01CD18BF22577DE70012CB0F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableTypeExtension.swift; path = "MVVM Sample/ObservableTypeExtension.swift"; sourceTree = SOURCE_ROOT; };
 		574D65B6D083407426DAE774 /* Pods-MVVM Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.release.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.release.xcconfig"; sourceTree = "<group>"; };
 		653A4D8BD87440CDA8D149E8 /* Pods-MVVM Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.debug.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +109,13 @@
 		01CD187722576C4E0012CB0F /* MVVM Sample */ = {
 			isa = PBXGroup;
 			children = (
-				01CD189C22576D1D0012CB0F /* App */,
-				01CD189B22576D110012CB0F /* Module */,
-				01CD189D22576DCD0012CB0F /* View */,
-				01CD189E22576DD40012CB0F /* Resource */,
+				01CD18A0225774060012CB0F /* App */,
+				01CD18AC225775850012CB0F /* Model */,
+				01CD18AD225775910012CB0F /* Network */,
+				01CD18B02257797E0012CB0F /* Constant */,
+				01CD18A1225774130012CB0F /* View */,
+				01CD18A7225774DD0012CB0F /* Resource */,
+				01CD18C122577F0E0012CB0F /* Extensions */,
 				01CD188422576C4F0012CB0F /* Info.plist */,
 			);
 			path = "MVVM Sample";
@@ -107,37 +130,93 @@
 			path = "MVVM SampleTests";
 			sourceTree = "<group>";
 		};
-		01CD189B22576D110012CB0F /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				01CD187A22576C4E0012CB0F /* ViewController.swift */,
-			);
-			name = Module;
-			path = Network;
-			sourceTree = "<group>";
-		};
-		01CD189C22576D1D0012CB0F /* App */ = {
+		01CD18A0225774060012CB0F /* App */ = {
 			isa = PBXGroup;
 			children = (
 				01CD187822576C4E0012CB0F /* AppDelegate.swift */,
 			);
-			path = App;
+			name = App;
 			sourceTree = "<group>";
 		};
-		01CD189D22576DCD0012CB0F /* View */ = {
+		01CD18A1225774130012CB0F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				01CD187C22576C4E0012CB0F /* Home.storyboard */,
+				01CD18A9225775120012CB0F /* ViewController */,
+				01CD18A52257746C0012CB0F /* Cell */,
+				01CD18A3225774390012CB0F /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		01CD189E22576DD40012CB0F /* Resource */ = {
+		01CD18A3225774390012CB0F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				01CD187C22576C4E0012CB0F /* Home.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		01CD18A52257746C0012CB0F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		01CD18A7225774DD0012CB0F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				01CD187F22576C4F0012CB0F /* Assets.xcassets */,
 				01CD188122576C4F0012CB0F /* LaunchScreen.storyboard */,
 			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		01CD18A9225775120012CB0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18AA225775640012CB0F /* MSHomeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		01CD18AC225775850012CB0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18B922577C110012CB0F /* User.swift */,
+				01CD18BB22577C520012CB0F /* UserResponse.swift */,
+				01CD18BD22577C5E0012CB0F /* BaseResponse.swift */,
+			);
+			name = Model;
+			path = View;
+			sourceTree = "<group>";
+		};
+		01CD18AD225775910012CB0F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18AE225775D80012CB0F /* EndPoint.swift */,
+				01CD18B322577A5E0012CB0F /* APIConstants.swift */,
+				01CD18B522577B0C0012CB0F /* APIManager.swift */,
+				01CD18B722577BE50012CB0F /* APIs.swift */,
+				01CD18BF22577DE70012CB0F /* APIError.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		01CD18B02257797E0012CB0F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18B1225779920012CB0F /* Constants.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		01CD18C122577F0E0012CB0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */,
+			);
+			name = Extensions;
 			path = Resource;
 			sourceTree = "<group>";
 		};
@@ -158,7 +237,6 @@
 				9D4E32F611715B18E3160825 /* Pods-MVVM SampleTests.debug.xcconfig */,
 				DC18FBB2DA898C69016CCDEE /* Pods-MVVM SampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +287,7 @@
 		01CD186D22576C4E0012CB0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MS;
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Shyam Kumar";
@@ -343,8 +422,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CD187B22576C4E0012CB0F /* ViewController.swift in Sources */,
+				01CD18C322577F300012CB0F /* ObservableTypeExtension.swift in Sources */,
+				01CD18B622577B0C0012CB0F /* APIManager.swift in Sources */,
+				01CD18BE22577C5E0012CB0F /* BaseResponse.swift in Sources */,
 				01CD187922576C4E0012CB0F /* AppDelegate.swift in Sources */,
+				01CD18B422577A5E0012CB0F /* APIConstants.swift in Sources */,
+				01CD18AF225775D80012CB0F /* EndPoint.swift in Sources */,
+				01CD18BA22577C110012CB0F /* User.swift in Sources */,
+				01CD18AB225775640012CB0F /* MSHomeViewController.swift in Sources */,
+				01CD18B2225779920012CB0F /* Constants.swift in Sources */,
+				01CD18B822577BE50012CB0F /* APIs.swift in Sources */,
+				01CD18BC22577C520012CB0F /* UserResponse.swift in Sources */,
+				01CD18C022577DE70012CB0F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
