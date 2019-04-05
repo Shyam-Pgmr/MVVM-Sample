@@ -9,9 +9,12 @@ target 'MVVM Sample' do
    # Design
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxSwiftUtilities'
+    
   # Network
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'Kingfisher'
 
   target 'MVVM SampleTests' do
     inherit! :search_paths

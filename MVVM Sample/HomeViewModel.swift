@@ -9,11 +9,13 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxSwiftUtilities
 
 class HomeViewModel {
 
     // MARK: - Properties
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    let isLoading: ActivityIndicator =  ActivityIndicator()
     let users: BehaviorRelay<[User]> = BehaviorRelay(value: [])
     var getUsersResult: Observable<Result<UserResponse, Error>> {
         return _getUsers.asObservable().observeOn(MainScheduler.instance)
@@ -41,6 +43,7 @@ extension HomeViewModel {
     func getUsers(offset: Int, count: Int) {
         
         APIs.getUsers(offset: offset, count: count)
+            .trackActivity(isLoading)
             .observeOn(SerialDispatchQueueScheduler(qos: .default))
             .subscribe(onNext: { [weak self] (response) in
                 self?._getUsers.onNext(Result.success(response))

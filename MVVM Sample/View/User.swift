@@ -15,3 +15,9 @@ struct User {
 }
 
 extension User: Codable {}
+
+extension User: CustomStringConvertible {
+    var description: String {
+        return name
+    }
+}

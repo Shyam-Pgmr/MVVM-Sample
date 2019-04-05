@@ -24,6 +24,10 @@
 		01CD18C022577DE70012CB0F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BF22577DE70012CB0F /* APIError.swift */; };
 		01CD18C322577F300012CB0F /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */; };
 		01CD18C6225785A50012CB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C5225785A50012CB0F /* HomeViewModel.swift */; };
+		01CD18CA22578DE90012CB0F /* MSImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C922578DE90012CB0F /* MSImageCollectionViewCell.swift */; };
+		01CD18CC22578F100012CB0F /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18CB22578F100012CB0F /* UIImageView+Additions.swift */; };
+		01CD18CF225792E50012CB0F /* MSCollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18CD225792E50012CB0F /* MSCollectionHeaderReusableView.swift */; };
+		01CD18D0225792E50012CB0F /* MSCollectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CD18CE225792E50012CB0F /* MSCollectionHeaderReusableView.xib */; };
 		0CC6D6ACAB6B92A8D81FC9F9 /* Pods_MVVM_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */; };
 		BCD7982768E35FE307F51F8B /* Pods_MVVM_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B373318C4A32DDC8AF99B011 /* Pods_MVVM_Sample.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,10 @@
 		01CD18BF22577DE70012CB0F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableTypeExtension.swift; path = "MVVM Sample/ObservableTypeExtension.swift"; sourceTree = SOURCE_ROOT; };
 		01CD18C5225785A50012CB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		01CD18C922578DE90012CB0F /* MSImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		01CD18CB22578F100012CB0F /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
+		01CD18CD225792E50012CB0F /* MSCollectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCollectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		01CD18CE225792E50012CB0F /* MSCollectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSCollectionHeaderReusableView.xib; sourceTree = "<group>"; };
 		574D65B6D083407426DAE774 /* Pods-MVVM Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.release.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.release.xcconfig"; sourceTree = "<group>"; };
 		653A4D8BD87440CDA8D149E8 /* Pods-MVVM Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.debug.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +170,9 @@
 		01CD18A52257746C0012CB0F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				01CD18C922578DE90012CB0F /* MSImageCollectionViewCell.swift */,
+				01CD18CD225792E50012CB0F /* MSCollectionHeaderReusableView.swift */,
+				01CD18CE225792E50012CB0F /* MSCollectionHeaderReusableView.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */,
+				01CD18CB22578F100012CB0F /* UIImageView+Additions.swift */,
 			);
 			name = Extensions;
 			path = Resource;
@@ -338,6 +350,7 @@
 			files = (
 				01CD188322576C4F0012CB0F /* LaunchScreen.storyboard in Resources */,
 				01CD188022576C4F0012CB0F /* Assets.xcassets in Resources */,
+				01CD18D0225792E50012CB0F /* MSCollectionHeaderReusableView.xib in Resources */,
 				01CD187E22576C4E0012CB0F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,20 +419,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftUtilities/RxSwiftUtilities.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftUtilities.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,6 +452,8 @@
 			files = (
 				01CD18C322577F300012CB0F /* ObservableTypeExtension.swift in Sources */,
 				01CD18B622577B0C0012CB0F /* APIManager.swift in Sources */,
+				01CD18CF225792E50012CB0F /* MSCollectionHeaderReusableView.swift in Sources */,
+				01CD18CA22578DE90012CB0F /* MSImageCollectionViewCell.swift in Sources */,
 				01CD18BE22577C5E0012CB0F /* BaseResponse.swift in Sources */,
 				01CD187922576C4E0012CB0F /* AppDelegate.swift in Sources */,
 				01CD18B422577A5E0012CB0F /* APIConstants.swift in Sources */,
@@ -445,6 +464,7 @@
 				01CD18B2225779920012CB0F /* Constants.swift in Sources */,
 				01CD18B822577BE50012CB0F /* APIs.swift in Sources */,
 				01CD18BC22577C520012CB0F /* UserResponse.swift in Sources */,
+				01CD18CC22578F100012CB0F /* UIImageView+Additions.swift in Sources */,
 				01CD18C022577DE70012CB0F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
