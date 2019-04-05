@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vM3-vh-mLZ" customClass="MSCollectionHeaderReusableView" customModule="MVVM_Sample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E5H-1T-vVk">
+                    <rect key="frame" x="12" y="11" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ta5-gP-KWA"/>
+                        <constraint firstAttribute="width" constant="50" id="V5Q-MO-7CF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjl-6z-q3h">
+                    <rect key="frame" x="70" y="25.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="E5H-1T-vVk" firstAttribute="centerY" secondItem="vM3-vh-mLZ" secondAttribute="centerY" id="9Sm-GJ-mkh"/>
+                <constraint firstItem="hjl-6z-q3h" firstAttribute="centerY" secondItem="vM3-vh-mLZ" secondAttribute="centerY" id="IC0-fX-i24"/>
+                <constraint firstItem="wZO-hB-cJ1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hjl-6z-q3h" secondAttribute="trailing" constant="12" id="QRh-26-aeh"/>
+                <constraint firstItem="hjl-6z-q3h" firstAttribute="leading" secondItem="E5H-1T-vVk" secondAttribute="trailing" constant="8" id="sCy-LM-fgo"/>
+                <constraint firstItem="E5H-1T-vVk" firstAttribute="leading" secondItem="wZO-hB-cJ1" secondAttribute="leading" constant="12" id="tbc-v4-caK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="wZO-hB-cJ1"/>
+            <connections>
+                <outlet property="imageView" destination="E5H-1T-vVk" id="rBZ-SQ-ndC"/>
+                <outlet property="nameLabel" destination="hjl-6z-q3h" id="b75-cu-9C1"/>
+            </connections>
+            <point key="canvasLocation" x="-22" y="-82"/>
+        </collectionReusableView>
+    </objects>
+</document>
