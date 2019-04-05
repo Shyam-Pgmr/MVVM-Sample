@@ -10,21 +10,25 @@ import UIKit
 
 class MSHomeViewController: UIViewController {
 
+    // MARK: - Properties
+    let viewModel = HomeViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        setupBindings()
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension MSHomeViewController {
+    
+    private func setupUI() {
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupBindings() {
+        
     }
-    */
-
 }

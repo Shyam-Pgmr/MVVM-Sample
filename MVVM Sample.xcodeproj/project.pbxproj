@@ -23,6 +23,7 @@
 		01CD18BE22577C5E0012CB0F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BD22577C5E0012CB0F /* BaseResponse.swift */; };
 		01CD18C022577DE70012CB0F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18BF22577DE70012CB0F /* APIError.swift */; };
 		01CD18C322577F300012CB0F /* ObservableTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */; };
+		01CD18C6225785A50012CB0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD18C5225785A50012CB0F /* HomeViewModel.swift */; };
 		0CC6D6ACAB6B92A8D81FC9F9 /* Pods_MVVM_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */; };
 		BCD7982768E35FE307F51F8B /* Pods_MVVM_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B373318C4A32DDC8AF99B011 /* Pods_MVVM_Sample.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		01CD18BD22577C5E0012CB0F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		01CD18BF22577DE70012CB0F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		01CD18C222577F300012CB0F /* ObservableTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableTypeExtension.swift; path = "MVVM Sample/ObservableTypeExtension.swift"; sourceTree = SOURCE_ROOT; };
+		01CD18C5225785A50012CB0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		574D65B6D083407426DAE774 /* Pods-MVVM Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.release.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.release.xcconfig"; sourceTree = "<group>"; };
 		653A4D8BD87440CDA8D149E8 /* Pods-MVVM Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Sample.debug.xcconfig"; path = "Target Support Files/Pods-MVVM Sample/Pods-MVVM Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		955A277D37974E6D2B8BB534 /* Pods_MVVM_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				01CD18AC225775850012CB0F /* Model */,
 				01CD18AD225775910012CB0F /* Network */,
 				01CD18B02257797E0012CB0F /* Constant */,
+				01CD18C4225785920012CB0F /* ViewModel */,
 				01CD18A1225774130012CB0F /* View */,
 				01CD18A7225774DD0012CB0F /* Resource */,
 				01CD18C122577F0E0012CB0F /* Extensions */,
@@ -218,6 +221,14 @@
 			);
 			name = Extensions;
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		01CD18C4225785920012CB0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01CD18C5225785A50012CB0F /* HomeViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		4AAD33E43939AB7665CBB331 /* Frameworks */ = {
@@ -430,6 +441,7 @@
 				01CD18AF225775D80012CB0F /* EndPoint.swift in Sources */,
 				01CD18BA22577C110012CB0F /* User.swift in Sources */,
 				01CD18AB225775640012CB0F /* MSHomeViewController.swift in Sources */,
+				01CD18C6225785A50012CB0F /* HomeViewModel.swift in Sources */,
 				01CD18B2225779920012CB0F /* Constants.swift in Sources */,
 				01CD18B822577BE50012CB0F /* APIs.swift in Sources */,
 				01CD18BC22577C520012CB0F /* UserResponse.swift in Sources */,
